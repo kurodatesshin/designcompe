@@ -1,0 +1,547 @@
+@charset "utf-8";
+/*------------------- 共通設定 -------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fbffc4;
+}
+li{
+    list-style: none;
+}
+
+
+
+/*------------------- header -------------------*/
+header{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../img/お店.jpg);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+}
+header h1{
+    position: absolute;
+    color: #fff;
+    font-family: ff-market-web, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3em;
+    margin: 0;
+    top: 53%;
+    right: 47%;
+    text-shadow: 0 0 3px #000;
+}
+nav{
+    width: 100%;
+    background-color: #fbffc4;
+    position: fixed;
+    z-index: 5;
+}
+#global{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    margin: 10px;
+}
+.globalchild{
+    width: 40px;
+    margin-right: 10px;
+}
+.globalchild img:hover{
+    transform: scale(0.9);
+    transition: all 0.5s;
+}
+.globalchild:nth-child(1){
+    width: 150px;
+}
+.globalchild img{
+    width: 100%;
+}
+
+/* ハンバーガー */
+#botan{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background-image: url(../img/hanburger.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+}
+#menu{
+    display: none;
+}
+#menu:checked ~ #botan{
+    background-image: url(../img/batten.png);
+}
+
+.nakami{
+    width: 30%;
+    height: 100%;
+    background-color: #e5ba73;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 50;
+    transition: all 0.5s;
+}
+.nakami ul{
+    margin-top: 10em;
+    height: 60%;
+}
+.nakami ul li{
+    list-style: none;
+    height: 30%;
+    font-size: 2em;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.nakami ul li a{
+    display: block;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.nakami ul li a:hover{
+    letter-spacing: 3px;
+}
+#menu:checked ~.nakami{
+    right: 0;
+}
+
+
+
+
+
+
+
+/*--------------- 商品 ---------------*/
+#product{
+    position: relative;
+}
+.asiraihappa{
+    position: absolute;
+}
+#asirai-product1{
+    width: 300px;
+    top: 10vh;
+    left: -50px;
+    transform: rotate(45deg);
+}
+#asirai-product2{
+    width: 200px;
+    top: 90vh;
+    right: -50px;
+    transform: rotate(-45deg);
+}
+.parent{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 13em auto;
+}
+.parent li{
+    width: 45%;
+    
+}
+.parent dl{
+    padding-top: 10%;
+}
+.parent dl dt{
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.parent dl dd{
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.parent img{
+    width: 100%;
+    border-radius: 10px;
+}
+#product a{
+    text-decoration: none;
+}
+#product div{
+    width: 30%;
+    margin: 3em auto;
+    background-color: #4d3510;
+    padding: 2em;
+    border-radius: 12px;
+    transition: all .5s;
+}
+#product div:hover{
+    letter-spacing: 3px;
+}
+#product div p{
+    text-align: center;
+    color: #fff;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3つのこだわり */
+h4{
+    text-align: center;
+    margin: 300px 0 64px 0;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+#sard div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    color: #fff;
+}
+#sard div dl{
+    width: 30%;
+    min-width: 300px;
+    height: 360px;
+    margin: 1em;
+    padding: 2em;
+}
+#sard div dl:nth-child(1){
+    background-image: url(../img/product-komeko.jpg);
+    background-size: cover;
+}
+#sard div dl:nth-child(2){
+    background-image: url(../img/product-seihou.jpg);
+    background-size: cover;
+}
+#sard div dl:nth-child(3){
+    background-image: url(../img/product-sozai.jpg);
+    background-size: cover;
+}
+#sard div dl dt{
+    text-align: center;
+    font-size: 1.7em;
+    margin-bottom: 2em;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+#sard div dl dd{
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2em;
+}
+
+
+
+
+/*--------------- 作っている人 ---------------*/
+#kok ul{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+#kok ul li{
+    width: 40%;
+    position: relative;
+
+}
+#kok ul li img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+#kok ul li h3{
+    position: absolute;
+    top: 45%;
+    right: 30%;
+    font-size: 1.3em;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+#kok p{
+    width: 40%;
+    line-height: 2em;
+    letter-spacing: 1px;
+    margin: 5em auto 0 auto;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#kok div{
+    width: 30%;
+    margin: 5em auto;
+    background-image: url(../img/insta\ 背景.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 2em;
+    border-radius: 12px;
+    transition: all 0.5s;
+}
+#kok div:hover{
+    letter-spacing: 3px;
+}
+#kok a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+/* footer */
+footer{
+    background-color: #e5ba73;
+    color: rgb(39, 16, 16);
+    
+}
+footer section{
+    display: flex;
+    height: 90vh;
+}
+#footerleft{
+    width: 60%;
+}
+#footerleft ul li{
+    font-size: 2em;
+    margin:1em 3em;
+    list-style: none;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+#footerleft ul li a{
+    color: rgb(56, 22, 22);
+    text-decoration: none;
+    transition: 0.5s;
+}
+#footerleft ul li a:hover{
+    letter-spacing: 3px;
+}
+#footerright{
+    width: 40%;
+    position: relative;
+}
+#footerright ul{
+    display: flex;
+    justify-content: space-around;
+}
+#footerlogo p{
+    text-align: center;
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+#footerlogo ul li{
+    width: 50%;
+    text-align: center;
+}
+
+#footerlogo ul li img{
+    width: 40%;
+
+}
+#footerlogo img{
+    width: 100%
+}
+#footerlogo img:hover{
+    transform: scale(0.95);
+    transition: all 0.5s;
+}
+footer .seeproduct{
+    width: 150px;
+    position: absolute;
+    top: 0;
+    right: 20%;
+}
+footer  #kaiten{
+    animation: 20s linear infinite;
+    animation-name: rotation;
+    
+}
+@keyframes rotation{
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+}
+
+
+#footerlogo{
+    width: 50%;
+    margin: 3em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* タブレットサイズ */
+@media screen and (max-width: 1000px){
+    header h1{
+        top: 56%;
+        right: 43%;
+    }
+    #botan{
+        background-size: 50px;
+    }
+    .nakami{
+        width: 50%;
+    }
+    .nakami ul li a{
+        text-align: center;
+    }
+    #asirai-product1{
+        width: 25%;
+    }
+    .parent{
+        justify-content: space-between;
+        width: 80%;
+        margin: 7em auto;
+    }
+    .parent li{
+        width: 50%;
+        
+    }
+    .parent dl{
+        padding-top: 0;
+    }
+    #sard div{
+        display: block;
+        flex-wrap: nowrap;
+    }
+    #sard div dl{
+        width: 80%;
+        margin: 2em auto;
+    }
+    #kok p{
+        width: 70%;
+    }
+    #kok div{
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* スマホサイズ */
+@media screen and (max-width: 600px){
+    body{
+        font-size: .7em;
+    }
+    header{
+        height: 35vh;
+    }
+    header h1{
+        top: 56%;
+        right: 40%;
+    }
+    #botan{
+        background-size: 40px;
+        top: 25px;
+        right: 25px;
+    }
+    .nakami{
+        
+        width: 80%;
+    }
+    .nakami ul li{
+        font-size: 2.5em;
+    }
+    .nakami ul li a{
+        text-align: center;
+    }
+    .parent li{
+    width: 45%;
+    
+    }
+    #sard div dl{
+        height: 300px;
+    }
+    #sard div dl dt{
+        margin: 1em auto;
+    }
+    #kok ul{
+        display: block;
+    }
+    #kok ul li{
+        width: 90%;
+        margin: 0  auto;
+    }
+    #kok ul li img{
+        width: 100%;
+        object-fit: cover;
+    }
+    #kok ul li h3{
+        text-align: center;
+    }
+    #kok p{
+        width: 60%;
+    }
+    #footerlogo ul li img{
+        width: 70%;
+    
+    }
+    #footerlogo ul li{
+        width: 33.333%;
+        text-align: left;
+    }
+    footer section{
+        height: 70vh;
+    }
+    #footerlogo{
+        width: 70%;
+    }
+}

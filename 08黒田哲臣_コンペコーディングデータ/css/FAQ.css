@@ -1,0 +1,263 @@
+@charset "utf-8";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+body{
+    background-color: #fbffc4;
+}
+/* グローバルナビゲーションメニュー */
+nav{
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    background-color: #fbffc4;
+}
+#global{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    margin: 10px;
+}
+.globalchild{
+    width: 40px;
+    margin-right: 10px;
+}
+.globalchild:nth-child(1){
+    width: 150px;
+}
+.globalchild img{
+    width: 100%;
+}
+.globalchild img:hover{
+    transform: scale(0.9);
+    transition: all 0.5s;
+}
+/* ハンバーガー */
+#botan{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background-image: url(../img/hanburger.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+}
+#menu{
+    display: none;
+}
+#menu:checked ~ #botan{
+    background-image: url(../img/batten.png);
+}
+
+.nakami{
+    width: 30%;
+    height: 100%;
+    background-color: #e5ba73;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 50;
+    transition: all 0.5s;
+}
+.nakami ul{
+    margin-top: 10em;
+    height: 60%;
+}
+.nakami ul li{
+    list-style: none;
+    height: 30%;
+    font-size: 2em;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.nakami ul li a{
+    display: block;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.nakami ul li a:hover{
+    letter-spacing: 3px;
+}
+#menu:checked ~.nakami{
+    right: 0;
+}
+
+
+
+/* FAQ */
+main{
+    padding-top: 100px;
+}
+h4{
+    text-align: center;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+dl{
+    width: 60%;
+    height: 200px;
+    margin: 2em auto;
+    background-color: #faeab1;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+dt{
+    font-size: 1.5em;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 30px 0;
+}
+dd{
+    bottom: 1em;
+    right: 1em;
+    padding: 20px;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* footer */
+footer{
+    background-color: #e5ba73;
+    color: rgb(39, 16, 16);
+    
+}
+footer section{
+    display: flex;
+    height: 90vh;
+}
+#footerleft{
+    width: 70%;
+}
+#footerleft ul li{
+    font-size: 2em;
+    margin:1em 3em;
+    list-style: none;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+#footerright{
+    width: 30%;
+    position: relative;
+}
+#footerright ul{
+    display: flex;
+    justify-content: space-around;
+}
+#footerlogo p{
+    text-align: center;
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+#footerlogo ul li{
+    width: 50%;
+    text-align: center;
+}
+#footerleft ul li a{
+    color: rgb(56, 22, 22);
+    text-decoration: none;
+    transition: 0.5s;
+}
+#footerleft ul li a:hover{
+    letter-spacing: 3px;
+}
+#footerlogo ul li img{
+    width: 40%;
+
+}
+#footerlogo img{
+    width: 100%
+}
+#footerlogo img:hover{
+    transform: scale(0.95);
+    transition: all 0.5s;
+}
+footer .seeproduct{
+    width: 150px;
+    position: absolute;
+    top: 0;
+    right: 20%;
+}
+footer  #kaiten{
+    animation: 20s linear infinite;
+    animation-name: rotation;
+    
+}
+@keyframes rotation{
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+}
+
+
+#footerlogo{
+    width: 50%;
+    margin: 3em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* タブレットサイズ */
+@media screen and (max-width: 960px){
+    #botan{
+        background-size: 50px;
+    }
+    .nakami{
+        width: 50%;
+    }
+
+}
+
+
+/* スマホサイズ */
+@media screen and (max-width: 600px){
+    body{
+        font-size: .9em;
+    }
+    #botan{
+        background-size: 40px;
+        top: 25px;
+        right: 25px;
+    }
+    .nakami{
+        
+        width: 80%;
+    }
+    .nakami ul li{
+        font-size: 2.5em;
+    }
+    dl{
+        width: 80%;
+    }
+    footer section{
+        height: 70vh;
+    }
+    #footerlogo{
+        width: 70%;
+    }
+}
